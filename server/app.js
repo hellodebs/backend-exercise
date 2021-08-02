@@ -8,11 +8,14 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/api/books", (req, res) => {
-  Book.find()
+  const filter = req.query;
+  const itemsPerPage = 5;
+  Book.find(filter)
+    .limit(itemsPerPage)
     .then((data) => {
       res.send(data);
     })
-    .catch(() => res.send("Book not found"));
+    .catch(() => res.send());
 });
 
 app.post("/api/books", (req, res) => {

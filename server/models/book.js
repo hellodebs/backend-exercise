@@ -10,6 +10,10 @@ const bookSchema = new Schema(
     },
     author: { type: String, required: true },
     isRead: { type: Boolean, required: false },
+    genre: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

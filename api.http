@@ -1,5 +1,6 @@
+
 ###Get all books
-GET http://localhost:4001/api/books HTTP/1.1
+GET http://localhost:4001/api/books/ HTTP/1.1
 
 ###Create a book
 POST http://localhost:4001/api/books HTTP/1.1
@@ -7,7 +8,8 @@ Content-Type: application/json
 
 {
     "title": "New title",
-    "author": "Author",
+    "author": "New author",
+    "genre": "HORROR",
     "isRead": true
 }
 
@@ -17,7 +19,8 @@ Content-Type: application/json
 
 {
     "title": "Update title",
-    "author": "Author",
+    "author": "Update author",
+    "gerne": "Update genre",
     "isRead": true
 }
 
